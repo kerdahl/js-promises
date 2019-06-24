@@ -19,11 +19,11 @@ const giphyAPI = `https://api.giphy.com/v1/gifs/search?api_key=GIPHY_API_KEY_HER
 // }
 
 // async function processData() {
-//   let wordnikResponse = await fetch(wordnikAPI);
-//   let wordnikData = await wordnikResponse.json();
+//   const wordnikResponse = await fetch(wordnikAPI);
+//   const wordnikData = await wordnikResponse.json();
 //   createP(wordnikData.word));
-//   var giphyResponse = await fetch(giphyAPI + wordnikData.word);
-//   var giphyData = await giphyResponse.json();
+//   const giphyResponse = await fetch(giphyAPI + wordnikData.word);
+//   const giphyData = await giphyResponse.json();
 //   createImg(data.data[0].images['fixed_height_small'].url);
 // }
 
@@ -43,7 +43,7 @@ function setup() {
 
 async function processData() {
   createP("cat");
-  let response = await fetch(giphyAPI + "cat");
-  let data = await response.json();
+  const response = await fetch(giphyAPI + "cat");
+  const data = await response.json();
   createImg(data.data[0].images['fixed_height_small'].url);
 }
