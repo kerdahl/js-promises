@@ -1,0 +1,19 @@
+{
+  "name": "js-promises",
+  "version": "1.0.0",
+  "description": "Learning about JavaScript promises",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-kyle:kerdahl/js-promises.git"
+  },
+  "author": "Kyle Erdahl",
+  "license": "ISC"
+}
