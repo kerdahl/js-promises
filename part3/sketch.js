@@ -43,7 +43,7 @@ function setup() {
 
 async function processData() {
   createP("cat");
-  var response = await fetch(giphyAPI + "cat");
-  var data = await response.json();
+  let response = await fetch(giphyAPI + "cat");
+  let data = await response.json();
   createImg(data.data[0].images['fixed_height_small'].url);
 }
