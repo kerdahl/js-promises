@@ -15,16 +15,24 @@ const giphyAPI = `https://api.giphy.com/v1/gifs/search?api_key=GIPHY_API_KEY_HER
 // //       .catch(err => console.log(err));
 // 
 //   processData()
+//     .then(results => {
+//       createP(results.word);
+//       createImg(results.img);
+//     })
 //     .catch(err => console.error(err));
 // }
 
 // async function processData() {
 //   const wordnikResponse = await fetch(wordnikAPI);
 //   const wordnikData = await wordnikResponse.json();
-//   createP(wordnikData.word));
-//   const giphyResponse = await fetch(giphyAPI + wordnikData.word);
+//   const the_word = wordnikData.word;
+//   const giphyResponse = await fetch(giphyAPI + the_word);
 //   const giphyData = await giphyResponse.json();
-//   createImg(data.data[0].images['fixed_height_small'].url);
+//   const img_url = data.data[0].images['fixed_height_small'].url;
+//   return {
+//     word: the_word,
+//     img: img_url
+//   }
 // }
 
 function setup() {
@@ -38,12 +46,21 @@ function setup() {
   //   .catch(err => console.log(err));
 
   processData()
+    .then(results => {
+      createP(results.word);
+      createImg(results.img);
+    })
     .catch(err => console.error(err));
 }
 
 async function processData() {
-  createP("cat");
+  const the_word = "cat";
   const response = await fetch(giphyAPI + "cat");
   const data = await response.json();
-  createImg(data.data[0].images['fixed_height_small'].url);
+  const img_url = data.data[0].images['fixed_height_small'].url;
+
+  return {
+    word: the_word,
+    img: img_url
+  }
 }
