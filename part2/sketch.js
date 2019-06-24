@@ -1,3 +1,5 @@
+// disable ESLint warning; setup method called by p5 library as entry point for javascript
+// eslint-disable-next-line no-unused-vars
 function setup() {
   noCanvas();
   delayES8(1000)
